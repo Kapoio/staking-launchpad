@@ -44,7 +44,7 @@ export const GENESIS_FORK_VERSION = forkVersion;
 if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
     throw new Error("REACT_APP_PRICE_PER_VALIDATOR must be of type: number")
 }
-export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
+export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32000;
 
 if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT_APP_EJECTION_PRICE))) {
     throw new Error("REACT_APP_EJECTION_PRICE must be of type: number")
