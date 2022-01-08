@@ -9,12 +9,12 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 
 // public
 export const ETH2_NETWORK_NAME          = (IS_MAINNET || !process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME) ? 'mainnet' : process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME;
-export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'GöETH';
+export const TICKER_NAME                = IS_MAINNET ? 'PLQ' : 'GöETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${ETH2_NETWORK_NAME.toLowerCase()}/validator`;
 export const BEACONCHAIN_URL            = `https://${ETH2_NETWORK_NAME.toLowerCase()}.beaconcha.in`;
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
-export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x00000000219ab540356cBB839Cbe05303d7705Fa';
+export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x9B4eecf2bce0988bE7d9a13e044972c94974eA21';
 export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '1.0.0';
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/';
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://status-im.github.io/nimbus-eth2/intro.html';
@@ -34,7 +34,7 @@ if(process.env.REACT_APP_ETH_DEPOSIT_OFFSET && Number.isNaN(Number(process.env.R
 }
 export const ETH_DEPOSIT_OFFSET = Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET) * Number(!IS_MAINNET) || 0;
 
-let forkVersion = Buffer.from('00000000', 'hex')
+let forkVersion = Buffer.from('00008787', 'hex')
 if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
     forkVersion = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
 }
