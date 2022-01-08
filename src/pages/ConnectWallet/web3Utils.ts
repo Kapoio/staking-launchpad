@@ -15,7 +15,7 @@ import {
 } from '../../utils/envVars';
 
 export enum NetworkChainId {
-  'Mainnet' = 1,
+  'Mainnet' = 34695,
   'Ropsten' = 3,
   'Rinkeby' = 4,
   'Göerli' = 5,
